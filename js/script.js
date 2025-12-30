@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
-    burger.addEventListener('click', () => {
+    function toggleMenu() {
         // Toggle Nav
         nav.classList.toggle('nav-active');
 
@@ -20,17 +20,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Burger Animation
         burger.classList.toggle('toggle');
-    });
+    }
 
-    // Smooth Scrolling
+    burger.addEventListener('click', toggleMenu);
+
+    // Smooth Scrolling & Close Menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            nav.classList.remove('nav-active'); // Close mobile menu on click
             
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Si le menu est ouvert (mode mobile), on le ferme proprement
+            if (nav.classList.contains('nav-active')) {
+                toggleMenu();
+            }
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Évite erreur si href="#"
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
