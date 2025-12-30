@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Bots Discord - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=gg+sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Le J</a>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#bots">Mes Bots</a></li>
+                <li><a href="#community">Communauté</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Boostez votre serveur Discord</h1>
+            <p>Découvrez mes bots Discord conçus pour améliorer l'expérience de votre communauté. Modération, fun, utilitaire, tout y est.</p>
+            <div class="hero-btns">
+                <a href="#bots" class="btn btn-primary">Voir les Bots</a>
+                <a href="#community" class="btn btn-secondary">Rejoindre le Serveur</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bots Section -->
+    <section id="bots" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Bots</h2>
+            <div class="bots-grid">
+                
+                <!-- Bot 1: Yako -->
+                <div class="bot-card">
+                    <div class="bot-img-container">
+                        <img src="yako/pdp.jpeg" alt="Yako" class="bot-img">
+                    </div>
+                    <h3>Yako</h3>
+                    <p class="bot-desc">Un bot polyvalent pour gérer votre serveur avec efficacité et simplicité.</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1396411539648544809&permissions=8&scope=bot%20applications.commands" target="_blank" class="btn btn-invite"><i class="fab fa-discord"></i> Inviter</a>
+                </div>
+
+                <!-- Bot 2: VisionGiveaway -->
+                <div class="bot-card">
+                    <div class="bot-img-container">
+                        <img src="visiongiveaway/pdp.png" alt="VisionGiveaway" class="bot-img">
+                    </div>
+                    <h3>VisionGiveaway</h3>
+                    <p class="bot-desc">Le bot ultime pour organiser vos giveaways et récompenser votre communauté.</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1454527589329928456&permissions=8&scope=bot%20applications.commands" target="_blank" class="btn btn-invite"><i class="fab fa-discord"></i> Inviter</a>
+                </div>
+
+                <!-- Bot 3: Lux Compta -->
+                <div class="bot-card">
+                    <div class="bot-img-container">
+                        <img src="lux-compta/pdp.png" alt="Lux Compta" class="bot-img">
+                    </div>
+                    <h3>Lux Compta</h3>
+                    <p class="bot-desc">Gérez la comptabilité et l'économie de votre serveur ou entreprise virtuelle.</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1418126128492707850&permissions=8&scope=bot%20applications.commands" target="_blank" class="btn btn-invite"><i class="fab fa-discord"></i> Inviter</a>
+                </div>
+
+            </div>
+
+            <div class="coming-soon">
+                <p><i class="fas fa-hammer"></i> D'autres bots sont en cours de développement !</p>
+                <p>Revenez visiter le site souvent pour découvrir les nouveautés.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section community-section">
+        <div class="container community-content">
+            <h2>Rejoignez la Communauté</h2>
+            <p>Besoin d'aide ? Envie de discuter ou de proposer une idée de bot ? Rejoignez notre serveur officiel !</p>
+            <a href="https://discord.gg/UTrYfA3n58" target="_blank" class="btn btn-discord-server"><i class="fab fa-discord"></i> Rejoindre le Serveur</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-wrapper">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom / Pseudo</label>
+                        <input type="text" id="name" name="name" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Choisir un sujet...</option>
+                            <option value="support">Support</option>
+                            <option value="creation">Demande de création de bot</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                    </div>
+
+                    <!-- Sécurité Anti-Bot -->
+                    <!-- 1. Honeypot (Invisible pour les humains, rempli par les robots) -->
+                    <div style="display: none;">
+                        <label for="website_url">Laissez ce champ vide</label>
+                        <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- 2. Captcha Mathématique Simple -->
+                    <div class="form-group captcha-group">
+                        <label for="captcha-input" id="captcha-label">Question de sécurité : Combien font 3 + 5 ?</label>
+                        <input type="number" id="captcha-input" name="captcha-input" required placeholder="Réponse...">
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">Envoyer le message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Le J. Tous droits réservés.</p>
+            <div class="socials">
+                <a href="https://discord.gg/UTrYfA3n58" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
