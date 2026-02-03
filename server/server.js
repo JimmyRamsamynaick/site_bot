@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3300;
 
 // Définition de la racine du projet
 // SUR VOTRE VPS, REMPLACEZ LA LIGNE CI-DESSOUS PAR : const projectRoot = '/root/site_bot';
