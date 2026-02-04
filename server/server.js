@@ -27,6 +27,7 @@ app.use('/js', express.static(path.join(projectRoot, 'js')));
 app.use('/yako', express.static(path.join(projectRoot, 'yako')));
 app.use('/visiongiveaway', express.static(path.join(projectRoot, 'visiongiveaway')));
 app.use('/lux-compta', express.static(path.join(projectRoot, 'lux-compta')));
+app.use('/yako_guardian', express.static(path.join(projectRoot, 'yako_guardian')));
 
 // Route racine explicite
 app.get('/', (req, res) => {
